@@ -1,7 +1,7 @@
 /*
 file name: Assignment4_p2.cpp
-Written by: 
-Date:
+Written by: Sejin Yoon_u1311019
+Date: Apr 9, 2023
 
 */
 
