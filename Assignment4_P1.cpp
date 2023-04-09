@@ -1,7 +1,7 @@
 /*
 file name: Assignment4_p1.cpp
-Written by: 
-Date:
+Written by: Sejin Yoon_u1311019
+Date: Apr 9, 2023.
 
 */
 
@@ -23,6 +23,7 @@ input is  in radians.
 */
 
 float sin(float,int);  
+
 int main()
 {
 	float x;
@@ -31,7 +32,7 @@ int main()
 	cin>>x;
 	cout<<"Enter the value of n : ";
 	cin>>n;
-	
+	x = x * PI / 180.0;
     cout<<fixed<<setprecision(2);
 	cout<<"sin("<<x<<") = "<<sin(x,n)<<endl;
 	 
@@ -40,10 +41,21 @@ int main()
 
 int factorial(int n) 
 {
-   // STUDENT ... TODOS
+   if(n == 0) return 1;
+    int result = 1;
+    for(int i = 2; i <= n; i++) {
+        result *= i;
+    }
+    return result;
 }
 
 float sin(float x,int n)
 {
-     //// STUDENT ... TODOS
+    float sum = x;
+    float term = x;
+    for(int i = 1; i <= n; i++) {
+        term = -term * x * x / ((2 * i) * (2 * i + 1));
+        sum += term;
+    }
+    return sum;
 }
